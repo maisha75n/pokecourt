@@ -10,7 +10,7 @@ export default function CardTile({ card }: CardTileProps) {
   return (
     <Link
       href={`/card/${card.id}`}
-      className="block bg-white dark:bg-neutral-800 rounded-2xl shadow-sm border border-neutral-200 dark:border-neutral-700 overflow-hidden hover:shadow-md transition-shadow focus:outline-none focus:ring-2 focus:ring-neutral-500 focus:ring-offset-2 dark:focus:ring-offset-neutral-900"
+      className="block bg-white dark:bg-neutral-800 rounded-2xl shadow-md border-2 border-pokemon-blue/20 dark:border-pokemon-blue/30 overflow-hidden hover:shadow-xl hover:border-pokemon-red/40 dark:hover:border-pokemon-red/50 transition-all transform hover:-translate-y-1 focus:outline-none focus:ring-2 focus:ring-pokemon-blue focus:ring-offset-2"
     >
       <div className="relative w-full aspect-[2/3] bg-neutral-100 dark:bg-neutral-900">
         <Image

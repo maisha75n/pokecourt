@@ -1,8 +1,34 @@
 <svg width="400" height="600" xmlns="http://www.w3.org/2000/svg">
-  <rect width="400" height="600" fill="#e5e7eb"/>
-  <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" 
-        font-family="Arial, sans-serif" font-size="24" fill="#9ca3af">
-    No Image
+  <defs>
+    <linearGradient id="pokemonGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#EA1D25;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#2A72B8;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#F7C505;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background with Pokemon colors -->
+  <rect width="400" height="600" fill="url(#pokemonGradient)" opacity="0.15"/>
+  <rect x="10" y="10" width="380" height="580" rx="20" fill="#ffffff" opacity="0.95"/>
+  
+  <!-- Poke Ball design -->
+  <circle cx="200" cy="250" r="80" fill="none" stroke="#EA1D25" stroke-width="8"/>
+  <circle cx="200" cy="250" r="60" fill="#ffffff"/>
+  <line x1="120" y1="250" x2="280" y2="250" stroke="#1e293b" stroke-width="6"/>
+  <circle cx="200" cy="250" r="25" fill="#1e293b"/>
+  <circle cx="200" cy="250" r="15" fill="#ffffff"/>
+  
+  <!-- Text -->
+  <text x="50%" y="420" dominant-baseline="middle" text-anchor="middle" 
+        font-family="Arial, sans-serif" font-size="32" font-weight="bold" fill="#1e293b">
+    PokéCard
+  </text>
+  <text x="50%" y="470" dominant-baseline="middle" text-anchor="middle" 
+        font-family="Arial, sans-serif" font-size="20" fill="#64748b">
+    Add image to
+  </text>
+  <text x="50%" y="500" dominant-baseline="middle" text-anchor="middle" 
+        font-family="Arial, sans-serif" font-size="20" fill="#64748b">
+    /public/cards/
   </text>
 </svg>
-
