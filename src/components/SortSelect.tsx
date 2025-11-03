@@ -11,7 +11,8 @@ export default function SortSelect() {
     const params = new URLSearchParams(searchParams.toString());
     params.set('sort', e.target.value);
     params.delete('page'); // Reset pagination
-    router.push(`?${params.toString()}`);
+    const newUrl = params.toString() ? `?${params.toString()}` : window.location.pathname;
+    router.replace(newUrl);
   };
 
   return (

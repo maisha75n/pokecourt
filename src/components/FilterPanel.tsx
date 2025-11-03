@@ -59,7 +59,8 @@ export default function FilterPanel({ cards }: FilterPanelProps) {
     else params.delete('tags');
     
     params.delete('page'); // Reset pagination
-    router.push(`?${params.toString()}`);
+    const newUrl = params.toString() ? `?${params.toString()}` : window.location.pathname;
+    router.replace(newUrl);
   };
 
   const toggleTag = (tag: string) => {

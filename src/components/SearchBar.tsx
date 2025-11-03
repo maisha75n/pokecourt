@@ -17,7 +17,8 @@ export default function SearchBar() {
         params.delete('q');
       }
       params.delete('page'); // Reset to page 1 on search
-      router.push(`?${params.toString()}`);
+      const newUrl = params.toString() ? `?${params.toString()}` : window.location.pathname;
+      router.replace(newUrl);
     }, 250);
 
     return () => clearTimeout(timer);
