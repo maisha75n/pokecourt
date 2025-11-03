@@ -1,4 +1,5 @@
 import Card from '@/types/Card';
+// Import JSON directly - Next.js handles this
 import cardsData from '@/data/cards.json';
 
 type FilterSortOptions = {
@@ -13,6 +14,11 @@ type FilterSortOptions = {
 };
 
 export async function getAllCards(): Promise<Card[]> {
+  // Ensure cardsData is an array
+  if (!cardsData || !Array.isArray(cardsData)) {
+    console.error('Invalid cards data:', typeof cardsData);
+    return [];
+  }
   return cardsData as Card[];
 }
 
